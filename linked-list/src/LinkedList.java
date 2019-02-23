@@ -58,11 +58,12 @@ public class LinkedList {
     }
 
     public int getSize() {
+        return this.size;
 
     }
 
     public boolean isEmpty() {
-
+        return getSize() == 0;
     }
 
     public int get(int nodeNum) {
