@@ -11,23 +11,23 @@ public class LinkedList {
         this.size = 0;
     }
 
-    public LinkedList(Node head){
+    public LinkedList(Node head) {
         this.head = head;
         this.size = 1;
     }
 
     //methods
-    public void addNode(int value){
+    public void addNode(int value) {
         Node curr = head;
         Node temp = new Node(value);
 
-        if(curr == null){
+        if (curr == null) {
             this.head = temp;
             size += 1;
             return;
         }
 
-        while (curr.getNext() != null){
+        while (curr.getNext() != null) {
             curr = curr.getNext();
         }
 
@@ -35,21 +35,20 @@ public class LinkedList {
         size += 1;
     }
 
-    public void removeNode(){
-        Node curr =head;
+    public void removeNode() {
+        Node curr = head;
 
-        if(curr == null){
+        if (curr == null) {
             System.out.println("linked list empty");
             return;
-        }
-        else if (size == 1){
+        } else if (size == 1) {
             System.out.println("one node in linked list.deleting node");
             this.head = null;
             size--;
             return;
         }
 
-        while(curr.getNext() != null){
+        while (curr.getNext() != null) {
             curr = curr.getNext();
         }
 
@@ -58,15 +57,15 @@ public class LinkedList {
 
     }
 
-    public int getSize(){
+    public int getSize() {
 
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
 
     }
 
-    public int get(int nodeNum){
+    public int get(int nodeNum) {
 
     }
 }
