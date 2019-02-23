@@ -67,6 +67,15 @@ public class LinkedList {
     }
 
     public int get(int nodeNum) {
+        if (nodeNum <= 0) {
+            return -1;
+        }
+        Node curr = head;
 
+        for (int i = 1; i < nodeNum; i++) {
+            curr = curr.getNext();
+
+        }
+        return curr.getValue();
     }
 }
