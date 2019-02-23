@@ -36,6 +36,25 @@ public class LinkedList {
     }
 
     public void removeNode(){
+        Node curr =head;
+
+        if(curr == null){
+            System.out.println("linked list empty");
+            return;
+        }
+        else if (size == 1){
+            System.out.println("one node in linked list.deleting node");
+            this.head = null;
+            size--;
+            return;
+        }
+
+        while(curr.getNext() != null){
+            curr = curr.getNext();
+        }
+
+        curr.setNext(null);
+        size--;
 
     }
 
