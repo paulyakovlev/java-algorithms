@@ -3,29 +3,43 @@ import java.util.List;
 public class LinkedList {
     //properties
     Node head;
-    int count;
+    int size;
 
     //constructors
     public LinkedList() {
         this.head = null;
-        this.count = 0;
+        this.size = 0;
     }
 
     public LinkedList(Node head){
         this.head = head;
-        this.count = 1;
+        this.size = 1;
     }
 
     //methods
-    public void addNode(){
+    public void addNode(int value){
+        Node curr = head;
+        Node temp = new Node(value);
 
+        if(curr == null){
+            this.head = temp;
+            size += 1;
+            return;
+        }
+
+        while (curr.getNext() != null){
+            curr = curr.getNext();
+        }
+
+        curr.setNext(temp);
+        size += 1;
     }
 
     public void removeNode(){
 
     }
 
-    public int getCount(){
+    public int getSize(){
 
     }
 
